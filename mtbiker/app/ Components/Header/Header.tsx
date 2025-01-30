@@ -10,6 +10,8 @@ import { Dropdown } from "../MainPage/Dropdown";
 import Link from "next/link";
 
 export const Header = () => {
+  const isUserLogged = localStorage.getItem("logged") === "true";
+  console.log(isUserLogged);
   return (
     <div
       {...{
@@ -30,12 +32,27 @@ export const Header = () => {
       </div>
       <div
         {...{
-          className: "flex my-auto  space-x-2 w-3/5 justify-end mr-2",
+          className: "flex items-center space-x-2 w-3/5 justify-end mr-2",
         }}
       >
         <WeatherButton />
-        <NotificationsButton />
-        <Dropdown />
+        {isUserLogged ? (
+          <>
+            <NotificationsButton />
+            <Dropdown />
+          </>
+        ) : (
+          <div>
+            <span
+              {...{
+                className:
+                  "text-orange-400 hover:underline hover:text-orange-500 cursor-pointer",
+              }}
+            >
+              Prihlásiť sa
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );
