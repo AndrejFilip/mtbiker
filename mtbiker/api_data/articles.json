@@ -1,0 +1,124 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "description": "Sezóna 2024. Sezóna, keď som konečne po rokoch mal dosiahnuť to, čo som v jazdení vždy chcel. Tak prečo to neklaplo?",
+      "imgSrc": "https://images.mtbiker.sk/clanky/300/titulka_01_6787a5ab5e0b9.jpeg",
+      "header": "Je zranenie len otázka času, alebo sa mu dá prechádzať?",
+      "user_initials": "AB",
+      "user_name": "Andrejko",
+      "likes": 15,
+      "dislikes": 0,
+      "comments": 3,
+      "tags": ["MTB"]
+    },
+    {
+      "id": 2,
+      "description": "Pripravení na ďalší výlet, ďalšie výhľady, ďalšie kravské oblízance?",
+      "imgSrc": "https://images.mtbiker.sk/clanky/300/titulka_01_6784ea2dc2eb3.jpeg",
+      "header": "Na bicykli cez Kausen Pass: Priesmyk, ktorý je snom každhého milovníka hôr (a kráv)",
+      "user_initials": "PH",
+      "user_name": "Petriček",
+      "likes": 7,
+      "dislikes": 2,
+      "comments": 1,
+      "tags": ["GRAVEL", "MTB"]
+    },
+    {
+      "id": 3,
+      "description": "Už dávnejšie sa nešpecializujeme výhradne iba na cyklistiku. Dnes ti prinášame pár kúskov, ktoré využiješ na biku, ale rovnako aj pri iných...",
+      "imgSrc": "https://images.mtbiker.sk/clanky/300/titulka_01_678288d1b1138.jpg",
+      "header": "Univerzálna výbava pre rôzne aktivity",
+      "user_initials": "PB",
+      "user_name": "Paľko",
+      "likes": 3,
+      "dislikes": 0,
+      "comments": 10,
+      "tags": ["INTRO", "SERVICE"]
+    },
+    {
+      "id": 4,
+      "description": "Absolvujte spolu s nami krásnu trasu v horách a popri tom sa dozviete niekoľko tipov od jazdca, pre ktorého je bicykel v zime doslova",
+      "imgSrc": "https://images.mtbiker.sk/clanky/300/web-520x328-1_6782769775f44.jpg",
+      "header": "Jeden skvelý zimný výjazd v horách",
+      "user_initials": "JK",
+      "user_name": "Jarino",
+      "likes": 8,
+      "dislikes": 0,
+      "comments": 0,
+      "tags": ["MTB", "TRAINING", "GRAVEL"]
+    },
+    {
+      "id": 5,
+      "description": "Keď sa povie zimná dovolenka, väčšina ľudí ide niekam za teplom užiť si slnečné lúče. A potom som tu ja, Glevo – ja si dovolenku v januári beriem práve kvôli zime.",
+      "imgSrc": "https://images.mtbiker.sk/clanky/300/titulka_01_6786497ca4d4b.jpg",
+      "header": "Glevova zima na dvoch kolesách: Poľské Tatry plné snehu a výziev",
+      "user_initials": "DB",
+      "user_name": "Dominika",
+      "likes": 8,
+      "dislikes": 0,
+      "comments": 5,
+      "tags": ["TRAINING"]
+    },
+    {
+      "id": 6,
+      "description": "Bikefitting je vhodný ako prevencia zdravotných problémov, ale aj na zlepšenie športových výkonov. A rozhodne nejde iba o „zábavku“ pre profíkov. Význam má",
+      "imgSrc": "https://images.mtbiker.sk/clanky/300/Cepo_520x323_6745a0f635205.jpg",
+      "header": "Bikefitter Tomáš Cepka: keď už niečo bolí, je neskoro (rozhovor)",
+      "user_initials": "JM",
+      "user_name": "Jožo",
+      "likes": 1,
+      "dislikes": 1,
+      "comments": 7,
+      "tags": ["SERVICE", "INTRO"]
+    },
+    {
+      "id": 7,
+      "description": "V tejto cene máte na výber zo širokej ponuky kvalitných modelov, ktoré sú ideálne pre rôzne cyklistické disciplíny – od rekreačného jazdenia až...",
+      "imgSrc": "https://images.mtbiker.sk/clanky/300/titulka_01_677cf844718b3.jpg",
+      "header": "Hardtaily okolo 1 000 € – začiatok moderných trendov",
+      "user_initials": "BB",
+      "user_name": "Beatka",
+      "likes": 10,
+      "dislikes": 1,
+      "comments": 5,
+      "tags": ["INTRO", "MTB"]
+    },
+    {
+      "id": 8,
+      "description": "Zasnežené Karpaty, šmýkanie sa po ľade či brodenie sa nekonečným blatom. Takto všelijako môžu vyzerať podmienky na zimnej klasike.",
+      "imgSrc": "https://images.mtbiker.sk/clanky/300/Titulka_01_677e326f6a73e.jpg",
+      "header": "Pozvánka: Stupava Winter maraton MTB & RUN – poď odštartovať súťažnú sezónu",
+      "user_initials": "MA",
+      "user_name": "Maťo",
+      "likes": 4,
+      "dislikes": 0,
+      "comments": 10,
+      "tags": ["MTB", "GRAVEL", "ROAD"]
+    },
+    {
+      "id": 9,
+      "description": "Máme tu ďalšiu, už piatu časť môjho seriálu. Táto bude iná tým, že vyrážať nebudem z domu, ale zo Starej Ľubovne, kam pôjdem,...",
+      "imgSrc": "https://images.mtbiker.sk/clanky/300/titulka_01_6756ecb862abe.jpg",
+      "header": "Za granicou panstwa alebo „žiletkárčenie“ v južnom Poľsku (5. časť)",
+      "user_initials": "MS",
+      "user_name": "Marek",
+      "likes": 11,
+      "dislikes": 1,
+      "comments": 1,
+      "tags": ["ROAD", "GRAVEL"]
+    },
+    {
+      "id": 10,
+      "description": "Produkty v nasledujúcom článku majú spoločného menovateľa – dostupnosť. Zároveň vo vyhotovení a funkčnosti neprinášajú veľké...",
+      "imgSrc": "https://images.mtbiker.sk/clanky/300/titulka_01_676013b9a14a6.jpg",
+      "header": "Kvalita, ktorá neurobí prievan v peňaženke",
+      "user_initials": "MH",
+      "user_name": "Ujo Marián",
+      "likes": 7,
+      "dislikes": 0,
+      "comments": 6,
+      "tags": ["INTRO"]
+    }
+  ]
+}

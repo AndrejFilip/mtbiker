@@ -1,0 +1,21 @@
+{
+  "texts": [
+    {
+      "text": " Najväčší cyklistický e-shop v SR s viac ako 1 000 000 objednávkami",
+      "id": 1,
+      "img": "../images/image.png"
+    },
+    {
+      "text": "Vyše 60 000 produktov v ponuke, výborné ceny a vernostné zľavy",
+      "id": 2
+    },
+    {
+      "text": "Sme Ti k dispozícii v 6 moderných predajniach a online",
+      "id": 3
+    },
+    {
+      "text": "Expresné doručenie tovaru zo skladu do 24 hodín",
+      "id": 4
+    }
+  ]
+}
