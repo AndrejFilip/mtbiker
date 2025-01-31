@@ -128,7 +128,7 @@ export const SignInForm = ({
               <button
                 {...{
                   className:
-                    "btn text-white bg-orange-400 hover-bg-orange-500 rounded-none",
+                    "btn text-white bg-orange-400 hover:bg-orange-500 rounded-none",
                   type: "submit",
                 }}
               >
