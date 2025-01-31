@@ -2,7 +2,8 @@ interface ModalProps {
   modalOpen: boolean;
   setModalOpen(open: boolean): boolean | void;
   children: React.ReactNode;
-  className: string;
+  className?: string;
+  style?: React.CSSProperties;
 }
 
 export const Modal: React.FC<ModalProps> = ({
@@ -10,12 +11,13 @@ export const Modal: React.FC<ModalProps> = ({
   setModalOpen,
   children,
   className,
+  style,
 }) => {
   return (
     <div>
       {modalOpen ? (
         <div {...{ className: "modal modal-open" }}>
-          <div {...{ className }}>
+          <div {...{ className, style }}>
             <label
               {...{
                 onClick: () => {

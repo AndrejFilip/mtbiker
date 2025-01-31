@@ -22,7 +22,8 @@
     "react-query": "^3.39.3",
     "react-social-icons": "^6.18.0",
     "react-toastify": "^11.0.2",
-    "require-context": "^1.1.0"
+    "require-context": "^1.1.0",
+    "yup": "^1.6.1"
   },
   "devDependencies": {
     "@types/node": "^20",
