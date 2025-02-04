@@ -62,8 +62,7 @@ export const Header = () => {
         {...{
           modalOpen,
           setModalOpen,
-          className: "modal-box",
-          style: { maxWidth: "750px" },
+          className: "modal-box max-w-[750px]",
         }}
       >
         <SignInForm {...{ setModalOpen }} />

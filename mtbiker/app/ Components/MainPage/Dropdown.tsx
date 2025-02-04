@@ -1,15 +1,12 @@
 import React from "react";
 import { CiUser } from "react-icons/ci";
 import { DropdownMenuitem } from "./DropdownMenuitem";
+import { LogOutButton } from "../Header/LogOutButton";
 
 export const dropdownMenuItems = [
   {
     name: "Môj profil",
     page: "magazin",
-  },
-  {
-    name: "Nastavenia",
-    page: "nastavenia",
   },
 ];
 export const Dropdown = () => {
@@ -29,8 +26,14 @@ export const Dropdown = () => {
         }}
       >
         {dropdownMenuItems.map((item) => (
-          <DropdownMenuitem {...{ name: item.name, page: item.page }} />
+          <DropdownMenuitem
+            {...{
+              name: item.name,
+              page: item.page,
+            }}
+          />
         ))}
+        <LogOutButton />
       </ul>
     </div>
   );
