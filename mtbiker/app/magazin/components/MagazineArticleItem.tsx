@@ -1,9 +1,10 @@
+import Link from "next/link";
 import React from "react";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 import { LiaCommentSolid } from "react-icons/lia";
 
-type Tags =
+export type Tags =
   | "MTB"
   | "ROAD"
   | "SERVICE"
@@ -35,15 +36,24 @@ export const MagazineArticleItem: React.FC<MagazineArticleItemProps> = ({
   dislikes,
   comments,
   tags,
+  id,
 }) => {
+  const createArticleUrl = `/magazin/articles/${id}`;
+
   return (
     <div
       {...{ className: "flex flex-col gap-2 max-w-screen-sm", id: "article" }}
     >
       <img {...{ src: imgSrc, alt: "img" }} />
-      <span {...{ className: "text-md font-bold hover:text-orange-400" }}>
-        {header}
-      </span>
+      <Link {...{ href: createArticleUrl }}>
+        <span
+          {...{
+            className: "text-md font-bold hover:text-orange-400",
+          }}
+        >
+          {header}
+        </span>
+      </Link>
       <p {...{ className: "text-sm text-gray-600" }}> {description}</p>
       <div {...{ className: "flex items-center w-full" }}>
         <div
