@@ -3,29 +3,12 @@
 import { getMagazineArticle } from "@/app/api/articles";
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
-import { Tags } from "../components/MagazineArticleItem";
 import Alert from "@/app/ Components/Shared/Alert";
 import { Spinner } from "@/app/ Components/Shared/Spinner";
 import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
 import { LiaCommentSolid } from "react-icons/lia";
-import {
-  ArticleParagraph,
-  ParagraphProps,
-} from "../components/ArticleParagraph";
-
-interface MagazineArticleProps {
-  imgSrcFullSize: string;
-  description: string;
-  header: string;
-  user_initials: string;
-  user_name: string;
-  likes?: number | undefined;
-  dislikes?: number | undefined;
-  comments?: number | undefined;
-  tags?: Array<Tags>;
-  id?: number;
-  paragraphs: Array<ParagraphProps>;
-}
+import { ArticleParagraph } from "./ArticleParagraph";
+import { MagazineArticleProps } from "@/app/types";
 
 export const ArticleContainer = ({ id }: { id: number }) => {
   const { data, isLoading, isError, error } = useQuery({
@@ -104,9 +87,7 @@ export const ArticleContainer = ({ id }: { id: number }) => {
             <p {...{ className: "mt-5 text-sans text-md" }}>
               {article.description}
             </p>
-            {article.paragraphs.map((paragraph) => (
-              <ArticleParagraph {...{ paragraph }} />
-            ))}
+            <ArticleParagraph {...{ paragraphs: article.paragraphs }} />
           </div>
         </div>
       </div>

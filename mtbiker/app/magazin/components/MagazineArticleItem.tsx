@@ -1,30 +1,9 @@
+import { MagazineArticleItemProps } from "@/app/types";
 import Link from "next/link";
 import React from "react";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 import { LiaCommentSolid } from "react-icons/lia";
-
-export type Tags =
-  | "MTB"
-  | "ROAD"
-  | "SERVICE"
-  | "INTRO"
-  | "GRAVEL"
-  | "ALL"
-  | "TRAINING";
-
-export interface MagazineArticleItemProps {
-  imgSrc: string;
-  description: string;
-  header: string;
-  user_initials: string;
-  user_name: string;
-  likes?: number | undefined;
-  dislikes?: number | undefined;
-  comments?: number | undefined;
-  tags?: Array<Tags>;
-  id?: number;
-}
 
 export const MagazineArticleItem: React.FC<MagazineArticleItemProps> = ({
   imgSrc,

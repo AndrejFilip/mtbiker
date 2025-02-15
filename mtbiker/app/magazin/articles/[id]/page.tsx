@@ -1,4 +1,4 @@
-import { ArticleContainer } from "../ArticleContainer";
+import { ArticleContainer } from "../../components/ArticleContainer";
 
 export default async function Index({
   params,

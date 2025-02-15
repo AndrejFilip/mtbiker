@@ -1,6 +1,6 @@
 import React from "react";
 import { MagazineArticleItems } from "./MagazineArticleItems";
-import { MagazineArticleItemProps } from "./MagazineArticleItem";
+import { MagazineArticleItemProps } from "@/app/types";
 
 export const ArticlesContainer = ({
   articles,

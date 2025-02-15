@@ -16,11 +16,47 @@
         {
           "id": 1,
           "text": "Odkedy som začal jazdiť MTB, vždy ma bavil ten adrenalín a pocit, keď som dosiahol nejakú novú métu, keď som prekonal sám seba a svoj strach. Vzhliadal som ku gravity jazdcom a aj keď mi bolo jasné, že nikdy nedosiahnem ani len desatinu profi levelu, chcel som mať skill, aby ma na trati nič neprekvapilo a nemusel som prekážky obchádzať „chicken linami“.",
-          "firstImgSrc": "https://foto.mtbiker.sk/Other/2025/stoji_ten_adrenalin_vobec_za_to/01_1736943046.jpeg"
+          "images": [
+            {
+              "src": "https://foto.mtbiker.sk/Other/2025/stoji_ten_adrenalin_vobec_za_to/01_1736943046.jpeg"
+            }
+          ]
         },
         {
           "id": 2,
-          "text": "Už prvýkrát v Kálnici som si dal za cieľ niekedy poskákať trať ig Vito. Kto nepozná, tak je to legendárna trať v Kálnici s veľkými skokmi. Od mojej prvej návštevy sa počas rokov trochu pomenila, ale cieľ ostal rovnaký. **Hovoril som si, že ak toto niekedy zvládnem naskákať čisto, tak ma už žiadny skok neprekvapí.**\n\n Prvé roky, ako asi každý začínajúci biker, som strávil postupným posúvaním svojich limitov, zoznamovaním sa s rôznym typom terénu a zisťovaním, že v skutočnosti je všetko väčšie, strmšie a náročnejšie ako na YouTube. Považujem sa za rozvážneho človeka a nerobím veci štýlom „vyskúšam a uvidím“. Preto mi dlhšie trvalo, kým som sa na niektoré veci odhodlal, no zároveň sa mi aj vyhýbali vážnejšie zranenia."
+          "text": "Už prvýkrát v Kálnici som si dal za cieľ niekedy poskákať trať ig Vito. Kto nepozná, tak je to legendárna trať v Kálnici s veľkými skokmi. Od mojej prvej návštevy sa počas rokov trochu pomenila, ale cieľ ostal rovnaký. **Hovoril som si, že ak toto niekedy zvládnem naskákať čisto, tak ma už žiadny skok neprekvapí.**\n\n Prvé roky, ako asi každý začínajúci biker, som strávil postupným posúvaním svojich limitov, zoznamovaním sa s rôznym typom terénu a zisťovaním, že v skutočnosti je všetko väčšie, strmšie a náročnejšie ako na YouTube. Považujem sa za rozvážneho človeka a nerobím veci štýlom „vyskúšam a uvidím“. Preto mi dlhšie trvalo, kým som sa na niektoré veci odhodlal, no zároveň sa mi aj vyhýbali vážnejšie zranenia.",
+          "images": [
+            {
+              "src": "https://foto.mtbiker.sk/Other/2025/stoji_ten_adrenalin_vobec_za_to/02_1736943077.jpg"
+            },
+            {
+              "src": "https://foto.mtbiker.sk/Other/2025/stoji_ten_adrenalin_vobec_za_to/03_1736943058.jpeg"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "text": "Najväčší zlom v jazdení nastal, keď som práve v Kálnici stretol partiu z okolia, kde bývam. V partii, do ktorej som sa dostal, boli všetci lepší skokani ako ja, no rozdiel nebol priveľký. Dokázal som väčšinu tratí pojazdiť spolu s nimi a na pár skokoch som pocítil silu „hecu“. To mi odomklo hlavu a začal som jazdiť väčšie veci, nielen v Kálnici. **Partia dobre naladených ľudí vie spraviť s psychikou divy.**",
+          "images": [
+            {
+              "src": "https://foto.mtbiker.sk/Other/2025/stoji_ten_adrenalin_vobec_za_to/04_1736943082.jpg"
+            },
+            {
+              "src": "https://foto.mtbiker.sk/Other/2025/stoji_ten_adrenalin_vobec_za_to/05_1736943033.jpeg"
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "text": "Samozrejme, nebolo všetko iba ružové, no stále sa mi väčšie zranenia vyhýbali a ostávalo to maximálne pri odreninách a zlomených komponentoch. **Z každého pádu, z každého nedoskočeného skoku, krízovky či zničeného komponentu som sa poučil.** Analyzoval som, prečo sa to stalo, čo som spravil zle a išiel som ďalej. \n\n Medzi motorkármi sa hovorí: „Nie je otázka, či padneš, ale kedy sa to stane.“ A platí to na 100 % aj pri cyklistike. Mojou úlohou bolo pomaly sa zlepšovať, zbytočne neriskovať a používať hlavu. Myslel som si, že takýmto postupom sa vyhnem ťažkým zraneniam, používal som chrániče a všetko vyzeralo, že funguje.",
+          "images": [
+            {
+              "src": "https://foto.mtbiker.sk/Other/2025/stoji_ten_adrenalin_vobec_za_to/06_1736943088.jpg"
+            },
+            {
+              "src": "https://foto.mtbiker.sk/Other/2025/stoji_ten_adrenalin_vobec_za_to/07_1736943095.jpeg"
+            }
+          ]
         }
       ]
     },
