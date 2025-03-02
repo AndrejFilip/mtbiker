@@ -72,7 +72,7 @@ export interface ParagraphProps {
   id: number;
   text: string;
   images: Array<ParagraphImagesProps>;
-  numberOfImages: number;
+  quote: string | undefined;
 }
 
 interface ParagraphImagesProps {

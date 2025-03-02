@@ -1,6 +1,9 @@
 "use client";
 
-import { getMagazineArticle } from "@/app/api/articles";
+import {
+  getMagazineArticle,
+  getMagazineArticlesFull,
+} from "@/app/api/articles";
 import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import Alert from "@/app/ Components/Shared/Alert";
@@ -8,7 +11,9 @@ import { Spinner } from "@/app/ Components/Shared/Spinner";
 import { AiOutlineDislike, AiOutlineLike } from "react-icons/ai";
 import { LiaCommentSolid } from "react-icons/lia";
 import { ArticleParagraph } from "./ArticleParagraph";
-import { MagazineArticleProps } from "@/app/types";
+import { MagazineArticleItemProps, MagazineArticleProps } from "@/app/types";
+import { MagazineArticleItem } from "./MagazineArticleItem";
+import Link from "next/link";
 
 export const ArticleContainer = ({ id }: { id: number }) => {
   const { data, isLoading, isError, error } = useQuery({
@@ -18,7 +23,16 @@ export const ArticleContainer = ({ id }: { id: number }) => {
     retry: 1,
   });
 
+  const { data: data1 } = useQuery({
+    queryKey: ["articles"],
+    queryFn: getMagazineArticlesFull(),
+    enabled: true,
+    retry: 1,
+  });
+
   const article: MagazineArticleProps = data;
+
+  const articles: MagazineArticleItemProps[] = data1;
 
   if (isError) {
     return <Alert {...{ text: error?.message }} />;
@@ -32,7 +46,7 @@ export const ArticleContainer = ({ id }: { id: number }) => {
     <div {...{ className: "w-full flex justify-center" }}>
       <div
         {...{
-          className: "max-w-screen-2xl gap-5 flex flex-col",
+          className: "max-w-screen-xl gap-5 flex flex-col",
         }}
       >
         <img {...{ src: article.imgSrcFullSize }} />
@@ -89,6 +103,23 @@ export const ArticleContainer = ({ id }: { id: number }) => {
             </p>
             <ArticleParagraph {...{ paragraphs: article.paragraphs }} />
           </div>
+        </div>
+        <Link {...{ href: "/magazin", className: "w-[200px], mx-auto" }}>
+          <button
+            {...{
+              className:
+                "btn bg-orange-400 hover:bg-orange-500 text-white rounded-none ",
+            }}
+          >
+            Zobraziť viac článkov
+          </button>
+        </Link>
+        <span {...{ className: "text-md font-bold" }}>Podobné články</span>
+
+        <div {...{ className: "grid grid-cols-3 gap-5 mb-5" }}>
+          {articles?.slice(0, 3).map((article: MagazineArticleItemProps) => (
+            <MagazineArticleItem {...{ ...article }} />
+          ))}
         </div>
       </div>
     </div>

@@ -32,7 +32,8 @@
             {
               "src": "https://foto.mtbiker.sk/Other/2025/stoji_ten_adrenalin_vobec_za_to/03_1736943058.jpeg"
             }
-          ]
+          ],
+          "quote": "Pri pohľade na to, ako niekto jazdil na biku, mi zostalo nevoľno."
         },
         {
           "id": 3,
@@ -48,15 +49,13 @@
         },
         {
           "id": 4,
-          "text": "Samozrejme, nebolo všetko iba ružové, no stále sa mi väčšie zranenia vyhýbali a ostávalo to maximálne pri odreninách a zlomených komponentoch. **Z každého pádu, z každého nedoskočeného skoku, krízovky či zničeného komponentu som sa poučil.** Analyzoval som, prečo sa to stalo, čo som spravil zle a išiel som ďalej. \n\n Medzi motorkármi sa hovorí: „Nie je otázka, či padneš, ale kedy sa to stane.“ A platí to na 100 % aj pri cyklistike. Mojou úlohou bolo pomaly sa zlepšovať, zbytočne neriskovať a používať hlavu. Myslel som si, že takýmto postupom sa vyhnem ťažkým zraneniam, používal som chrániče a všetko vyzeralo, že funguje.",
+          "text": "Našťastie sa tak nestalo – všetci stihli ubrzdiť a pribehli ku mne. Pamätám si, ako som sedel za stromom, držal si prekrížené ruky a skučal od bolesti. Prišla klasická hláška: „Skús s tým pohýbať, či to je zlomené.“ Bez šance, hlava mi nedovolila ani sa pohnúť. Keď opadol prvotný šok, lanovka ma zviezla dolu, navštívil som horskú záchrannú službu a už tam ma nečakali dobré správy. Stále som si ale hovoril, že to nebude také zlé a že za mesiac jazdím znova. \n\n Nasledoval prevoz do nemocnice, kde som sa snažil situáciu s doktorom odľahčiť vtipkovaním. RTG však ukázalo zlomeniny oboch zápästí s tým, že pravé bude potrebovať napraviť a následne operovať. Pri slove „napraviť“ som ozelenel a doslova ma orosilo, hoci som sedel v klimatizovanej miestnosti. Ten, komu už zlomeninu napravovali, vie, aké to je. Ak to nepoznáš, buď rád a dúfaj, že to ani nikdy poznať nebudeš.",
           "images": [
             {
-              "src": "https://foto.mtbiker.sk/Other/2025/stoji_ten_adrenalin_vobec_za_to/06_1736943088.jpg"
-            },
-            {
-              "src": "https://foto.mtbiker.sk/Other/2025/stoji_ten_adrenalin_vobec_za_to/07_1736943095.jpeg"
+              "src": "https://foto.mtbiker.sk/Other/2025/stoji_ten_adrenalin_vobec_za_to/10_1736943084.jpg"
             }
-          ]
+          ],
+          "quote": "Čo ťa nezabije, to ťa posilní sa hovorí, no nie?."
         }
       ]
     },
@@ -71,7 +70,34 @@
       "dislikes": 2,
       "comments": 1,
       "tags": ["GRAVEL", "MTB"],
-      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/titulka_00_64ccc317dfe88.jpg"
+      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/titulka_00_6784ea2d99689.jpeg",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "Krásne spomienky, ktoré som si v roku 2022 doniesla zo Švajčiarska, som s vami zdieľala už v predošlých článkoch. \n\n Dnes vás zoberiem so sebou na dva švajčiarske priesmyky – Pragel pass a Klausen pass. Poďme sa teda spolu nadchýnať krásnou prírodou, dávať meno každej kravke, „počítať braunsbergy“ a odmeňovať sa karamelovými kolieskami s vanilkovým krémom.",
+          "images": [
+            {
+              "src": "https://foto.mtbiker.sk/Trasy/2025/klausen_pass/01_1736764588.jpeg"
+            },
+            {
+              "src": "https://foto.mtbiker.sk/Trasy/2025/klausen_pass/02_1736764600.jpeg"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "text": "Konečne sa končia roviny a začína sa zaujímavá časť dňa! Najťažší kopec, najprudkejšie stúpanie môjho bicyklového života. Hodinu a pol so stúpaním v priemere 10 %. To neznie tak zle. Ale z toho polhodinové úseky v stúpaní a každý s 15 %, 14 %, 13 % a občas to vybehlo na 18 až 19 %. \n\n Neviem, ako sa oficiálne počíta ten priemer, ale mne to na 10 % teda nevychádza. Predstaviť si to môžeme ako **„The wall“ segment na Braunsbergu s bicyklom +10 kg a hodinu a pol v kuse.** Cesta je veľmi úzka, na jedno auto, ale ponúka prekrásne výhľady aj občerstvovacie stanice s lesnými jahôdkami. Vidno, že veľa ľudí a cyklistov ich sem obžierať nechodí. Energie je na rozdávanie, tlačiť netreba.",
+          "images": [
+            {
+              "src": "https://foto.mtbiker.sk/Other/2025/stoji_ten_adrenalin_vobec_za_to/02_1736943077.jpg"
+            },
+            {
+              "src": "https://foto.mtbiker.sk/Other/2025/stoji_ten_adrenalin_vobec_za_to/03_1736943058.jpeg"
+            }
+          ],
+          "quote": "Klausen pass je jeden z najznámejších priesmykov vo Švajčiarsku ."
+        }
+      ]
     },
     {
       "id": 3,
@@ -84,7 +110,27 @@
       "dislikes": 0,
       "comments": 10,
       "tags": ["INTRO", "SERVICE"],
-      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/titulka_00_678288d17c606.jpg"
+      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/titulka_00_678288d17c606.jpg",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "Fenix HM65R - 92,99 € \n\n Zrejme najuniverzálnejším zdrojom svetla je čelovka. Dáš ju na prilbu, čiapku, alebo len tak na čelo. Táto od Fenixu má svietivosť 1400 lúmenov. Svetlo produkuje z dvoch diód – diaľkovej a širokouhlej s dosvitom 163/55 metrov. Je napájaná akumulátorom typu 18650. Od plného nabitia vďaka nemu dokáže svietiť pri vysokom výkone 4 hodiny. Telo čelovky je vyrobené z ľahkej magnéziovej zliatiny, je preto nárazuvzdorná z výšky 2 metrov. MOC čelovky je 94,99 € a nájdeš ju v MTBIKER shope.",
+          "images": [
+            {
+              "src": "https://foto.mtbiker.sk/Other/mix-clanky/univerzalna_vybava_pre_rozne_aktivity/Fenix_HM65R_nabijatelna_celovka_1736608032.jpg"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "text": " Five Ten TRAIL CROSS MID PRO - 81,99 €. \n\n\n Zatlačíš v nich do flatov a rovnako pohodlne v nich vyrazíš na turistiku. Stredne vysoká konštrukcia poskytuje stabilitu pre členok. Podrážka Stealth® Phantom nezanecháva šmuhy na dlažbe a je priľnavá aj na klzkých či mokrých povrchoch. Medzipodrážka EVA je komfortnou oporou pre chodidlo a textilno-sieťovinový zvršok zas príjemné odvetráva nahromadenú vlhkosť. Za polstrovaný golier sa nedostane takmer žiadna nečistota. MOC topánok je 160 € a nájdeš ich v MTBIKER shope.",
+          "images": [
+            {
+              "src": "https://foto.mtbiker.sk/Other/mix-clanky/univerzalna_vybava_pre_rozne_aktivity/Five_Ten_TRAIL_CROSS_MID_PRO_topanky_1736608100.jpg"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": 4,
@@ -97,7 +143,13 @@
       "dislikes": 0,
       "comments": 0,
       "tags": ["MTB", "TRAINING", "GRAVEL"],
-      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/Titulna-1200x550-1_67827697458b4.jpg"
+      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/Titulna-1200x550-1_67827697458b4.jpg",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "Text bude doplnený!!!"
+        }
+      ]
     },
     {
       "id": 5,
@@ -110,7 +162,13 @@
       "dislikes": 0,
       "comments": 5,
       "tags": ["TRAINING"],
-      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/titulka_00_6786497c7efad.jpg"
+      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/titulka_00_6786497c7efad.jpg",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "Text bude doplnený!!!"
+        }
+      ]
     },
     {
       "id": 6,
@@ -123,7 +181,13 @@
       "dislikes": 1,
       "comments": 7,
       "tags": ["SERVICE", "INTRO"],
-      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/cepo_1200x550_6745a0f612abe.jpg"
+      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/cepo_1200x550_6745a0f612abe.jpg",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "Text bude doplnený!!!"
+        }
+      ]
     },
     {
       "id": 7,
@@ -136,7 +200,13 @@
       "dislikes": 1,
       "comments": 5,
       "tags": ["INTRO", "MTB"],
-      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/titulka_00_677cf84445c34.jpg"
+      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/titulka_00_677cf84445c34.jpg",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "Text bude doplnený!!!"
+        }
+      ]
     },
     {
       "id": 8,
@@ -149,7 +219,13 @@
       "dislikes": 0,
       "comments": 10,
       "tags": ["MTB", "GRAVEL", "ROAD"],
-      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/Titulka_00_677e326f43a2e.jpg"
+      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/Titulka_00_677e326f43a2e.jpg",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "Text bude doplnený!!!"
+        }
+      ]
     },
     {
       "id": 9,
@@ -162,7 +238,13 @@
       "dislikes": 1,
       "comments": 1,
       "tags": ["ROAD", "GRAVEL"],
-      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/titulka_00_6756ecb83efc4.jpg"
+      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/titulka_00_6756ecb83efc4.jpg",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "Text bude doplnený!!!"
+        }
+      ]
     },
     {
       "id": 10,
@@ -175,7 +257,13 @@
       "dislikes": 0,
       "comments": 6,
       "tags": ["INTRO"],
-      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/titulka_00_676013b97e501.jpg"
+      "imgSrcFullSize": "https://images.mtbiker.sk/clanky/src/titulka_00_676013b97e501.jpg",
+      "paragraphs": [
+        {
+          "id": 1,
+          "text": "Text bude doplnený!!!"
+        }
+      ]
     }
   ]
 }
