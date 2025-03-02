@@ -1,12 +1,10 @@
 "use client";
 
 import React from "react";
-import {
-  MagazineArticleItem,
-  MagazineArticleItemProps,
-} from "./MagazineArticleItem";
+import { MagazineArticleItem } from "./MagazineArticleItem";
 
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
+import { MagazineArticleItemProps } from "@/app/types";
 
 export const MagazineArticleItems = ({
   articles,

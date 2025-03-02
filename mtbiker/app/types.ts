@@ -67,3 +67,49 @@ export interface DropdownMenuitemProps {
   name: string;
   page: string;
 }
+
+export interface ParagraphProps {
+  id: number;
+  text: string;
+  images: Array<ParagraphImagesProps>;
+  quote: string | undefined;
+}
+
+interface ParagraphImagesProps {
+  src: string;
+}
+
+export interface MagazineArticleItemProps {
+  imgSrc: string;
+  description: string;
+  header: string;
+  user_initials: string;
+  user_name: string;
+  likes?: number | undefined;
+  dislikes?: number | undefined;
+  comments?: number | undefined;
+  tags?: Array<Tags>;
+  id?: number;
+}
+
+export interface MagazineArticleProps {
+  imgSrcFullSize: string;
+  description: string;
+  header: string;
+  user_name: string;
+  likes?: number | undefined;
+  dislikes?: number | undefined;
+  comments?: number | undefined;
+  tags?: Array<Tags>;
+  id?: number;
+  paragraphs: Array<ParagraphProps>;
+}
+
+export type Tags =
+  | "MTB"
+  | "ROAD"
+  | "SERVICE"
+  | "INTRO"
+  | "GRAVEL"
+  | "ALL"
+  | "TRAINING";
