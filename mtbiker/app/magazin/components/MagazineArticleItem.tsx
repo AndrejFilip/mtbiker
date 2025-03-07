@@ -1,29 +1,9 @@
+import { MagazineArticleItemProps } from "@/app/types";
+import Link from "next/link";
 import React from "react";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 import { LiaCommentSolid } from "react-icons/lia";
-
-type Tags =
-  | "MTB"
-  | "ROAD"
-  | "SERVICE"
-  | "INTRO"
-  | "GRAVEL"
-  | "ALL"
-  | "TRAINING";
-
-export interface MagazineArticleItemProps {
-  imgSrc: string;
-  description: string;
-  header: string;
-  user_initials: string;
-  user_name: string;
-  likes?: number | undefined;
-  dislikes?: number | undefined;
-  comments?: number | undefined;
-  tags?: Array<Tags>;
-  id?: number;
-}
 
 export const MagazineArticleItem: React.FC<MagazineArticleItemProps> = ({
   imgSrc,
@@ -35,15 +15,24 @@ export const MagazineArticleItem: React.FC<MagazineArticleItemProps> = ({
   dislikes,
   comments,
   tags,
+  id,
 }) => {
+  const createArticleUrl = `/magazin/articles/${id}`;
+
   return (
     <div
       {...{ className: "flex flex-col gap-2 max-w-screen-sm", id: "article" }}
     >
       <img {...{ src: imgSrc, alt: "img" }} />
-      <span {...{ className: "text-md font-bold hover:text-orange-400" }}>
-        {header}
-      </span>
+      <Link {...{ href: createArticleUrl }}>
+        <span
+          {...{
+            className: "text-md font-bold hover:text-orange-400",
+          }}
+        >
+          {header}
+        </span>
+      </Link>
       <p {...{ className: "text-sm text-gray-600" }}> {description}</p>
       <div {...{ className: "flex items-center w-full" }}>
         <div
