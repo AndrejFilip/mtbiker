@@ -1,9 +1,9 @@
 import { basicFetch } from "../network/src/BasicFetch";
 
+const url = process.env.NEXT_PUBLIC_ARTICLES_URL;
 export const getMagazineArticles =
   ({ page, limit, tags }: { page: number; limit: number; tags?: string }) =>
   () => {
-    const url = "http://localhost:3001";
     if (tags === "ALL") {
       const data = basicFetch(`${url}/articles?_page=${page}&_limit=${limit}`);
 
@@ -17,7 +17,6 @@ export const getMagazineArticles =
   };
 
 export const getMagazineArticlesFull = () => () => {
-  const url = "http://localhost:3001";
   const data = basicFetch(`${url}/articles?_page=1`);
 
   return data;
@@ -26,7 +25,6 @@ export const getMagazineArticlesFull = () => () => {
 export const getMagazineArticle =
   ({ id }: { id: number }) =>
   () => {
-    const url = "http://localhost:3001";
     const data = basicFetch(`${url}/articles/${id}`);
 
     return data;

@@ -17,14 +17,14 @@ import Link from "next/link";
 
 export const ArticleContainer = ({ id }: { id: number }) => {
   const { data, isLoading, isError, error } = useQuery({
-    queryKey: ["article"],
+    queryKey: ["article", id],
     queryFn: getMagazineArticle({ id }),
     enabled: true,
     retry: 1,
   });
 
   const { data: data1 } = useQuery({
-    queryKey: ["articles"],
+    queryKey: ["articles", "full", id],
     queryFn: getMagazineArticlesFull(),
     enabled: true,
     retry: 1,
