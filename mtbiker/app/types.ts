@@ -113,8 +113,3 @@ export type Tags =
   | "GRAVEL"
   | "ALL"
   | "TRAINING";
-
-export interface patchBody {
-  likes: number;
-  dislikes: number;
-}
