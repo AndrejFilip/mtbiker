@@ -1,6 +1,6 @@
 import { patchMagazineArticleLikes } from "@/app/api/articles";
 import { MagazineArticleItemProps } from "@/app/types";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import Link from "next/link";
 import React from "react";
 import { AiOutlineLike } from "react-icons/ai";
@@ -21,14 +21,18 @@ export const MagazineArticleItem: React.FC<MagazineArticleItemProps> = ({
 }) => {
   const createArticleUrl = `/magazin/articles/${id}`;
 
+  const queryClient = useQueryClient();
+
   const onPatchHandler = useMutation({
     mutationKey: ["Article", id],
     mutationFn: patchMagazineArticleLikes({ id, likes: (likes ?? 0) + 1 }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["articles_paginated"] });
+    },
   });
 
   const handlePatchMagazineArticleLikes = () => {
     onPatchHandler.mutate();
-    window.location.reload();
   };
 
   return (
