@@ -1,4 +1,5 @@
 import { basicFetch } from "../network/src/BasicFetch";
+import { patchBody } from "../types";
 
 const url = process.env.NEXT_PUBLIC_ARTICLES_URL;
 export const getMagazineArticles =
@@ -31,13 +32,27 @@ export const getMagazineArticle =
   };
 
 export const patchMagazineArticleLikes =
-  ({ id, likes }: { id?: number; likes?: number }) =>
+  ({ id, likes }: { id: number; likes: number }) =>
   () => {
     const headers = {
       "Content-type": "application/json",
     };
 
     const body = JSON.stringify({ likes });
+
+    const data = basicFetch(`${url}/articles/${id}`, "PATCH", headers, body);
+
+    return data;
+  };
+
+export const patchMagazineArticleDislikes =
+  ({ id, dislikes }: { id: number; dislikes: number }) =>
+  () => {
+    const headers = {
+      "Content-type": "application/json",
+    };
+
+    const body = JSON.stringify({ dislikes });
 
     const data = basicFetch(`${url}/articles/${id}`, "PATCH", headers, body);
 
