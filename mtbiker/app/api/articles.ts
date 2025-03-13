@@ -29,3 +29,17 @@ export const getMagazineArticle =
 
     return data;
   };
+
+export const patchMagazineArticleLikes =
+  ({ id, likes }: { id?: number; likes?: number }) =>
+  () => {
+    const headers = {
+      "Content-type": "application/json",
+    };
+
+    const body = JSON.stringify({ likes });
+
+    const data = basicFetch(`${url}/articles/${id}`, "PATCH", headers, body);
+
+    return data;
+  };

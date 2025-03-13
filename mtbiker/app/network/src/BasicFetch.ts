@@ -1,5 +1,15 @@
-export const basicFetch = async (url: string, method = "GET") => {
-  const response = await fetch(url, { cache: "no-store", method });
+export const basicFetch = async (
+  url: string,
+  method = "GET",
+  headers?: any,
+  body?: any
+) => {
+  const response = await fetch(url, {
+    cache: "no-store",
+    method,
+    headers,
+    body,
+  });
 
   const data = response.json();
 
