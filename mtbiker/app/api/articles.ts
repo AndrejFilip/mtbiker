@@ -1,5 +1,4 @@
 import { basicFetch } from "../network/src/BasicFetch";
-import { patchBody } from "../types";
 
 const url = process.env.NEXT_PUBLIC_ARTICLES_URL;
 export const getMagazineArticles =
