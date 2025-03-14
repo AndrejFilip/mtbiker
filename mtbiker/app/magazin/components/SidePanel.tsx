@@ -1,7 +1,7 @@
 import React from "react";
 import { MagazineDropdownMenu } from "./MagazineDropdownMenu";
-import { MagazineArticleItemProps } from "./MagazineArticleItem";
 import Link from "next/link";
+import { MagazineArticleItemProps } from "@/app/types";
 
 export const SidePanel = ({
   setSelectedItem,
