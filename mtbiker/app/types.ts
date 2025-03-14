@@ -85,11 +85,11 @@ export interface MagazineArticleItemProps {
   header: string;
   user_initials: string;
   user_name: string;
-  likes?: number | undefined;
-  dislikes?: number | undefined;
-  comments?: number | undefined;
+  likes: number | undefined;
+  dislikes: number | undefined;
+  comments: number | undefined;
   tags?: Array<Tags>;
-  id?: number;
+  id: number;
 }
 
 export interface MagazineArticleProps {

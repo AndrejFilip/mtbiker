@@ -29,3 +29,31 @@ export const getMagazineArticle =
 
     return data;
   };
+
+export const patchMagazineArticleLikes =
+  ({ id, likes }: { id: number; likes: number }) =>
+  () => {
+    const headers = {
+      "Content-type": "application/json",
+    };
+
+    const body = JSON.stringify({ likes });
+
+    const data = basicFetch(`${url}/articles/${id}`, "PATCH", headers, body);
+
+    return data;
+  };
+
+export const patchMagazineArticleDislikes =
+  ({ id, dislikes }: { id: number; dislikes: number }) =>
+  () => {
+    const headers = {
+      "Content-type": "application/json",
+    };
+
+    const body = JSON.stringify({ dislikes });
+
+    const data = basicFetch(`${url}/articles/${id}`, "PATCH", headers, body);
+
+    return data;
+  };

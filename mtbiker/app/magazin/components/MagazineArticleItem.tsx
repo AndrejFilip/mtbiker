@@ -1,4 +1,9 @@
+import {
+  patchMagazineArticleLikes,
+  patchMagazineArticleDislikes,
+} from "@/app/api/articles";
 import { MagazineArticleItemProps } from "@/app/types";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import Link from "next/link";
 import React from "react";
 import { AiOutlineLike } from "react-icons/ai";
@@ -18,6 +23,38 @@ export const MagazineArticleItem: React.FC<MagazineArticleItemProps> = ({
   id,
 }) => {
   const createArticleUrl = `/magazin/articles/${id}`;
+
+  const queryClient = useQueryClient();
+
+  const onLikesPatchHandler = useMutation({
+    mutationKey: ["Article", likes, id],
+    mutationFn: patchMagazineArticleLikes({
+      id,
+      likes: (likes ?? 0) + 1,
+    }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["articles_paginated"] });
+    },
+  });
+
+  const handlePatchMagazineArticleLikes = () => {
+    onLikesPatchHandler.mutate();
+  };
+
+  const onDislikesPatchHandler = useMutation({
+    mutationKey: ["Article", dislikes, id],
+    mutationFn: patchMagazineArticleDislikes({
+      id,
+      dislikes: (dislikes ?? 0) + 1,
+    }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["articles_paginated"] });
+    },
+  });
+
+  const handlePatchMagazineArticleDislikes = () => {
+    onDislikesPatchHandler.mutate();
+  };
 
   return (
     <div
@@ -69,9 +106,19 @@ export const MagazineArticleItem: React.FC<MagazineArticleItemProps> = ({
             className: "flex gap-1 justify-end items-center w-3/5",
           }}
         >
-          <AiOutlineLike {...{ className: "text-orange-400  " }} />
+          <AiOutlineLike
+            {...{
+              className: "text-orange-400 cursor-pointer",
+              onClick: handlePatchMagazineArticleLikes,
+            }}
+          />
           <span {...{ className: "text-sm" }}>{likes}</span>
-          <AiOutlineDislike {...{ className: "text-orange-400  " }} />
+          <AiOutlineDislike
+            {...{
+              className: "text-orange-400 cursor-pointer",
+              onClick: handlePatchMagazineArticleDislikes,
+            }}
+          />
           <span {...{ className: "text-sm" }}>{dislikes}</span>
           <LiaCommentSolid {...{ className: "text-orange-400  " }} />
           <span {...{ className: "text-sm" }}>{comments}</span>

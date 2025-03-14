@@ -8,9 +8,10 @@ import {
   getMagazineArticles,
   getMagazineArticlesFull,
 } from "@/app/api/articles";
-import { MagazineArticleItemProps } from "./MagazineArticleItem";
+
 import Alert from "@/app/ Components/Shared/Alert";
 import { Spinner } from "@/app/ Components/Shared/Spinner";
+import { MagazineArticleItemProps } from "@/app/types";
 
 export const MagazineContainer = () => {
   const [selectedItem, setSelectedItem] = useState<string>("ALL");
