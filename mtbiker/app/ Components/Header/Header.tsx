@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import mtbiker from "../../images/mtbiker.png";
 import { MenuButtons } from "./MenuButtons";
-import { NotificationsButton } from "./NotificationsButton";
+import { MessagesButton } from "./MessagesButton";
 
 import { WeatherButton } from "./WeatherButton";
 import { Dropdown } from "../MainPage/Dropdown";
@@ -41,7 +41,7 @@ export const Header = () => {
         <WeatherButton />
         {isUserLogged ? (
           <>
-            <NotificationsButton />
+            <MessagesButton />
             <Dropdown />
           </>
         ) : (
