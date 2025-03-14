@@ -26,7 +26,7 @@ export const MagazineArticleItem: React.FC<MagazineArticleItemProps> = ({
 
   const queryClient = useQueryClient();
 
-  const onPatchHandlerLikes = useMutation({
+  const onLikesPatchHandler = useMutation({
     mutationKey: ["Article", likes, id],
     mutationFn: patchMagazineArticleLikes({
       id,
@@ -38,10 +38,10 @@ export const MagazineArticleItem: React.FC<MagazineArticleItemProps> = ({
   });
 
   const handlePatchMagazineArticleLikes = () => {
-    onPatchHandlerLikes.mutate();
+    onLikesPatchHandler.mutate();
   };
 
-  const onPatchHandlerDislikes = useMutation({
+  const onDislikesPatchHandler = useMutation({
     mutationKey: ["Article", dislikes, id],
     mutationFn: patchMagazineArticleDislikes({
       id,
@@ -53,7 +53,7 @@ export const MagazineArticleItem: React.FC<MagazineArticleItemProps> = ({
   });
 
   const handlePatchMagazineArticleDislikes = () => {
-    onPatchHandlerDislikes.mutate();
+    onDislikesPatchHandler.mutate();
   };
 
   return (
