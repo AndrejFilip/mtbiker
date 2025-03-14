@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    " -server": "json-server --watch api_data/articles.json --port 3001"
+    " -server": "json-server --watch api_data/articles.json --port 3001",
+    " -server": "json-server --watch api_data/messages.json --port 3002"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.63.0",
