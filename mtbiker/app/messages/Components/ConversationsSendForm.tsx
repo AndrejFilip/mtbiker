@@ -4,6 +4,14 @@ import { MessagesConversationPostProps } from "@/app/types";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { ConversationSchema } from "@/app/Validation/ConversationSchema";
+
+interface FormValidationSchemaProps {
+  subject: string;
+  user: string;
+  body: string;
+}
 
 export const ConversationsSendForm = ({
   messageId,
@@ -12,7 +20,13 @@ export const ConversationsSendForm = ({
   messageId: number;
   setModalOpen(e: boolean): void;
 }) => {
-  const { register, handleSubmit } = useForm<MessagesConversationPostProps>();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValidationSchemaProps>({
+    resolver: yupResolver(ConversationSchema),
+  });
   const queryClient = useQueryClient();
   const dateAndTimeNow = new Date().toISOString();
   const onMessagesPostHandler = useMutation({
@@ -40,7 +54,7 @@ export const ConversationsSendForm = ({
 
       <form
         {...{
-          onSubmit: handleSubmit(handlePostMessages),
+          onSubmit: handleSubmit(handlePostMessages as any),
           className: "w-full flex flex-col gap-2",
         }}
       >
@@ -52,6 +66,9 @@ export const ConversationsSendForm = ({
             ...register("user"),
           }}
         />
+        <span {...{ className: "text-sm text-red-300 font-extrabold" }}>
+          {errors.user?.message}
+        </span>
         <span {...{ className: "text-sm font-bold" }}>Predmet</span>
         <Input
           {...{
@@ -60,6 +77,9 @@ export const ConversationsSendForm = ({
             ...register("subject"),
           }}
         />
+        <span {...{ className: "text-sm text-red-300 font-extrabold" }}>
+          {errors.user?.message}
+        </span>
         <span {...{ className: "text-sm font-bold" }}>Obsah správy</span>
         <textarea
           {...{
@@ -68,6 +88,9 @@ export const ConversationsSendForm = ({
             ...register("body"),
           }}
         />
+        <span {...{ className: "text-sm text-red-300 font-extrabold" }}>
+          {errors.body?.message}
+        </span>
         <button
           {...{
             className:
