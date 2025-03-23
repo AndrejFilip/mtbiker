@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { MessagesSearchContainer } from "./MessagesSearchContainer";
+import { Modal } from "@/app/ Components/Shared/Modal";
+import { ConversationsSendForm } from "./ConversationsSendForm";
 
-export const SidePanel = () => {
+export const SidePanel = ({ messageId }: { messageId: number }) => {
+  const [modalOpen, setModalOpen] = useState<boolean>(false);
   return (
     <div {...{ className: "max-w-xs" }}>
       <div {...{ className: "flex flex-col gap-5" }}>
@@ -9,10 +12,16 @@ export const SidePanel = () => {
           {...{
             className:
               "btn w-[300px] h-[30px] bg-orange-400 hover:bg-orange-500 rounded-none text-white",
+            onClick: () => setModalOpen(true),
           }}
         >
           Napísať novú správu
         </button>
+        <Modal
+          {...{ modalOpen, setModalOpen, className: "max-w-[350px] modal-box" }}
+        >
+          <ConversationsSendForm {...{ messageId, setModalOpen }} />
+        </Modal>
 
         <div
           {...{

@@ -120,3 +120,11 @@ export interface MessagesConversationTableItemsProps {
   user: string;
   lastMessage: string;
 }
+
+export interface MessagesConversationPostProps {
+  id: number;
+  subject: string;
+  user: string;
+  lastMessage: string;
+  body: string;
+}

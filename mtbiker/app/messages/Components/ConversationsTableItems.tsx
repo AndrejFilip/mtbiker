@@ -16,7 +16,7 @@ export const ConversationsTableItems = ({
             <th></th>
             <th>Používateľ</th>
             <th>Názov konverzácie</th>
-            <th>Poslednás správa</th>
+            <th>Posledná správa</th>
           </tr>
         </thead>
         <tbody>
