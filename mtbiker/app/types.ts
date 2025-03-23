@@ -119,6 +119,7 @@ export interface MessagesConversationTableItemsProps {
   subject: string;
   user: string;
   lastMessage: string;
+  archived: boolean;
 }
 
 export interface MessagesConversationPostProps {
@@ -127,4 +128,5 @@ export interface MessagesConversationPostProps {
   user: string;
   lastMessage: string;
   body: string;
+  archived: boolean;
 }

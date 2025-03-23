@@ -18,3 +18,21 @@ export const sendMessages = (message: MessagesConversationPostProps) => {
 
   return basicFetch(`${url}/messages`, "POST", headers, body);
 };
+
+export const archiveMessage = (id: number) => {
+  const headers = {
+    "Content-type": "application/json",
+  };
+
+  const body = JSON.stringify({ archived: true });
+
+  return basicFetch(`${url}/messages/${id}`, "PATCH", headers, body);
+};
+
+export const deleteMessage = (id: number) => {
+  const headers = {
+    "Content-type": "application/json",
+  };
+
+  return basicFetch(`${url}/messages/${id}`, "DELEtE", headers);
+};

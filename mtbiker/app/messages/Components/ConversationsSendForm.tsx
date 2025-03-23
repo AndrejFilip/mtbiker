@@ -42,6 +42,7 @@ export const ConversationsSendForm = ({
       ...formData,
       lastMessage: dateAndTimeNow,
       id: messageId,
+      archived: false,
     });
     setModalOpen(false);
   };
