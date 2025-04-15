@@ -1,3 +1,7 @@
+export const headers = {
+  "Content-type": "application/json",
+};
+
 export const basicFetch = async (
   url: string,
   method = "GET",
