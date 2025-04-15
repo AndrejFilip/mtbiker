@@ -79,7 +79,7 @@ export const ConversationsSendForm = ({
           }}
         />
         <span {...{ className: "text-sm text-red-300 font-extrabold" }}>
-          {errors.user?.message}
+          {errors.subject?.message}
         </span>
         <span {...{ className: "text-sm font-bold" }}>Obsah správy</span>
         <textarea

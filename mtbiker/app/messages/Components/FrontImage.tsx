@@ -12,7 +12,7 @@ export const FrontImage = () => {
       />
       <div
         {...{
-          className: "absolute top-20 w-full",
+          className: "absolute top-[100px] w-full",
         }}
       >
         <div {...{ className: "flex flex-col items-center" }}>
