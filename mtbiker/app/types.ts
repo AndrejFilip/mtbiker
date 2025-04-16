@@ -113,3 +113,20 @@ export type Tags =
   | "GRAVEL"
   | "ALL"
   | "TRAINING";
+
+export interface MessagesConversationTableItemsProps {
+  id: number;
+  subject: string;
+  user: string;
+  lastMessage: string;
+  archived: boolean;
+}
+
+export interface MessagesConversationPostProps {
+  id: number;
+  subject: string;
+  user: string;
+  lastMessage: string;
+  body: string;
+  archived: boolean;
+}

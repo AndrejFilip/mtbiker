@@ -300,8 +300,24 @@
   "messages": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "user": "Andrejko",
+      "subject": "Treba si vymeniť koleso na bicykli. Ihneď lebo sa niekde zdrbes ty pes",
+      "lastMessage": "2025-03-19T08:50:04Z",
+      "body": "Treba si vymeniť koleso na bicykli. Ihneď lebo sa niekde zdrbes ty pes, ale ne"
+    },
+    {
+      "id": 2,
+      "user": "Jarino",
+      "subject": "Ahoj Jarino",
+      "lastMessage": "2025-03-22T19:32:24.141Z",
+      "body": "som dobry po tebe"
+    },
+    {
+      "user": "ahoj",
+      "subject": "ewrw",
+      "body": "erwrwerew",
+      "lastMessage": "2025-03-23T11:33:59.825Z",
+      "id": 3
     }
   ]
 }

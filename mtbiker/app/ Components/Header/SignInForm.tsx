@@ -68,7 +68,9 @@ export const SignInForm = ({
                   </span>
                 </div>
                 <div>
-                  <Input {...{ placeholder: "email", name: "email" }} />
+                  <Input
+                    {...{ placeholder: "email", name: "email", height: 40 }}
+                  />
                   {errors.email ? (
                     <span {...{ className: "text-xs text-red-500" }}>
                       {errors.email}
@@ -90,6 +92,7 @@ export const SignInForm = ({
                       placeholder: "heslo",
                       name: "password",
                       type: "password",
+                      height: 40,
                     }}
                   />
                   {errors.password ? (
