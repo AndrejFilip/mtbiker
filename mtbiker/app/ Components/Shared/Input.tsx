@@ -9,34 +9,28 @@ interface InputProps {
   setValue?: (e: string) => void;
 }
 
-export const Input = React.forwardRef(
-  (
-    {
-      type = "text",
-      placeholder,
-      name,
-      height = 40,
-      value,
-      setValue,
-      ...rest
-    }: InputProps,
-    ref: ForwardedRef<HTMLInputElement>
-  ) => {
-    return (
-      <div>
-        <input
-          {...{
-            type,
-            className: `grow w-full h-[${height}px] border-2 border-solid p-2 focus:outline-none focus:border-orange-400`,
-            placeholder,
-            name,
-            value,
-            onChange: (e) => setValue && setValue(e.target.value),
-            ref,
-          }}
-          {...rest}
-        />
-      </div>
-    );
-  }
-);
+export const Input = ({
+  type = "text",
+  placeholder,
+  name,
+  height = 40,
+  value,
+  setValue,
+  ...rest
+}: InputProps) => {
+  return (
+    <div>
+      <input
+        {...{
+          type,
+          className: `grow w-full h-[${height}px] border-2 border-solid p-2 focus:outline-none focus:border-orange-400`,
+          placeholder,
+          name,
+          value,
+          onChange: (e) => setValue && setValue(e.target.value),
+        }}
+        {...rest}
+      />
+    </div>
+  );
+};
