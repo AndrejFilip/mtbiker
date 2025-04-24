@@ -1,4 +1,4 @@
-import React, { ForwardedRef } from "react";
+import React from "react";
 
 interface InputProps {
   type?: string;
@@ -7,6 +7,7 @@ interface InputProps {
   height: number;
   value?: string;
   setValue?: (e: string) => void;
+  inputRef?: React.Ref<HTMLInputElement>;
 }
 
 export const Input = ({
@@ -16,6 +17,7 @@ export const Input = ({
   height = 40,
   value,
   setValue,
+  inputRef,
   ...rest
 }: InputProps) => {
   return (
@@ -28,6 +30,7 @@ export const Input = ({
           name,
           value,
           onChange: (e) => setValue && setValue(e.target.value),
+          ref: inputRef,
         }}
         {...rest}
       />
