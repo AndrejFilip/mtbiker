@@ -1,3 +1,4 @@
+import { kMaxLength } from "buffer";
 import React from "react";
 
 interface InputProps {
@@ -31,6 +32,7 @@ export const Input = ({
           value,
           onChange: (e) => setValue && setValue(e.target.value),
           ref: inputRef,
+          maxLength: 50,
         }}
         {...rest}
       />

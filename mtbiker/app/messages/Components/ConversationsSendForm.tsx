@@ -71,7 +71,7 @@ export const ConversationsSendForm = ({
         <span {...{ className: "text-sm text-red-300 font-extrabold" }}>
           {errors.user?.message}
         </span>
-        <span {...{ className: "text-sm font-bold" }}>Predmet</span>
+        <span {...{ className: "text-sm font-bold" }}>Názov konverzácie</span>
         <Input
           {...{
             placeholder: "Predmet",

@@ -15,8 +15,14 @@ export const sendMessages = (message: MessagesConversationPostProps) => {
   return basicFetch(`${url}/messages`, "POST", headers, body);
 };
 
-export const archiveMessage = (id: number) => {
-  const body = JSON.stringify({ archived: true });
+export const archiveMessage = ({
+  id,
+  archived,
+}: {
+  id: number;
+  archived: boolean;
+}) => {
+  const body = JSON.stringify({ archived: archived });
 
   return basicFetch(`${url}/messages/${id}`, "PATCH", headers, body);
 };
