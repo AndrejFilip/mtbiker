@@ -7,7 +7,7 @@ export const ConversationsContainer = ({
   showArchived = false,
 }: {
   messages: MessagesConversationTableItemsProps[];
-  showArchived?: boolean;
+  showArchived: boolean;
 }) => {
   return (
     <div {...{ className: "max-w-screen-lg flex flex-col" }}>
