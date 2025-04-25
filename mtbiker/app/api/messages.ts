@@ -22,7 +22,7 @@ export const archiveMessage = ({
   id: number;
   archived: boolean;
 }) => {
-  const body = JSON.stringify({ archived: archived });
+  const body = JSON.stringify({ archived });
 
   return basicFetch(`${url}/messages/${id}`, "PATCH", headers, body);
 };
