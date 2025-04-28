@@ -19,7 +19,6 @@ export const MessagesContainer = () => {
   const getMessageId = getMaxId(messages) + 1;
   const archivedMessages = getArchivedMessages(messages);
 
-  console.log(archivedMessages);
   const [currentMessages, setCurrentMessages] = useState<
     "archived" | "conversations"
   >("conversations");
