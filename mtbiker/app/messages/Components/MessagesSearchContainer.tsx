@@ -1,13 +1,15 @@
 import { Input } from "@/app/ Components/Shared/Input";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export const MessagesSearchContainer = () => {
+  const { t } = useTranslation();
   return (
     <div {...{ className: "border border-base-300 flex-col" }}>
       <div {...{ className: "p-5 border-b" }}>
         <div {...{ className: "flex flex-col gap-3" }}>
           <span {...{ className: "text-md font-extrabold" }}>
-            Správa obsahuje
+            {t("conversations.conversationSearchContainer.messageInclude")}
           </span>
           <div {...{ className: "flex flex-row gap-2" }}>
             <Input {...{ placeholder: "správa", height: 40 }} />
@@ -24,7 +26,10 @@ export const MessagesSearchContainer = () => {
       </div>
       <div {...{ className: "p-5 border-b" }}>
         <div {...{ className: "flex flex-col gap-3" }}>
-          <span {...{ className: "text-md font-extrabold" }}>Používateľ</span>
+          <span {...{ className: "text-md font-extrabold" }}>
+            {" "}
+            {t("conversations.conversationSearchContainer.user")}
+          </span>
           <div {...{ className: "flex flex-row gap-2" }}>
             <Input {...{ placeholder: "použivateľ", height: 40 }} />
             <div
@@ -47,7 +52,7 @@ export const MessagesSearchContainer = () => {
       >
         <input {...{ type: "checkbox" }} />
         <span {...{ className: "text-xs font-bold" }}>
-          Zobraziť neprečítané navrchu
+          {t("conversations.conversationSearchContainer.showUnreadOnTop")}
         </span>
       </div>
     </div>

@@ -6,6 +6,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ConversationSchema } from "@/app/Validation/ConversationSchema";
+import { useTranslation } from "react-i18next";
 
 interface FormValidationSchemaProps {
   subject: string;
@@ -47,10 +48,12 @@ export const ConversationsSendForm = ({
     setModalOpen(false);
   };
 
+  const { t } = useTranslation();
+
   return (
     <div {...{ className: "w-full flex flex-col gap-2" }}>
       <span {...{ className: "text-lg font-extrabold" }}>
-        Napísať novú správu
+        {t("conversations.conversationSendForm.sendNewMessage")}
       </span>
 
       <form
@@ -59,7 +62,9 @@ export const ConversationsSendForm = ({
           className: "w-full flex flex-col gap-2",
         }}
       >
-        <span {...{ className: "text-sm font-bold" }}>Odosielateľ</span>
+        <span {...{ className: "text-sm font-bold" }}>
+          {t("conversations.conversationSendForm.sender")}
+        </span>
         <Input
           {...{
             placeholder: "odosielateľ",
@@ -71,7 +76,10 @@ export const ConversationsSendForm = ({
         <span {...{ className: "text-sm text-red-300 font-extrabold" }}>
           {errors.user?.message}
         </span>
-        <span {...{ className: "text-sm font-bold" }}>Názov konverzácie</span>
+        <span {...{ className: "text-sm font-bold" }}>
+          {" "}
+          {t("conversations.conversationSendForm.subject")}
+        </span>
         <Input
           {...{
             placeholder: "Predmet",
@@ -83,7 +91,10 @@ export const ConversationsSendForm = ({
         <span {...{ className: "text-sm text-red-300 font-extrabold" }}>
           {errors.subject?.message}
         </span>
-        <span {...{ className: "text-sm font-bold" }}>Obsah správy</span>
+        <span {...{ className: "text-sm font-bold" }}>
+          {" "}
+          {t("conversations.conversationSendForm.message")}
+        </span>
         <textarea
           {...{
             className: "textarea border border-base-300 h-[200px]",
@@ -101,7 +112,7 @@ export const ConversationsSendForm = ({
             type: "submit",
           }}
         >
-          Odoslať správu
+          {t("conversations.conversationSendForm.send")}
         </button>
       </form>
     </div>

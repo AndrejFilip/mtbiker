@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { MessagesSearchContainer } from "./MessagesSearchContainer";
 import { Modal } from "@/app/ Components/Shared/Modal";
 import { ConversationsSendForm } from "./ConversationsSendForm";
+import { useTranslation } from "react-i18next";
 
 export const SidePanel = ({
   messageId,
@@ -13,6 +14,7 @@ export const SidePanel = ({
   onConversationsClick: () => void;
 }) => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
+  const { t } = useTranslation();
   return (
     <div {...{ className: "max-w-xs" }}>
       <div {...{ className: "flex flex-col gap-5" }}>
@@ -23,7 +25,7 @@ export const SidePanel = ({
             onClick: () => setModalOpen(true),
           }}
         >
-          Napísať novú správu
+          {t("conversations.sidePanel.newMessage")}
         </button>
         <Modal
           {...{ modalOpen, setModalOpen, className: "max-w-[350px] modal-box" }}
@@ -43,7 +45,7 @@ export const SidePanel = ({
               className: "font-extrabold text-md pl-5 ",
             }}
           >
-            Konverzácie
+            {t("conversations.sidePanel.conversationsTitle")}
           </span>
         </div>
 
@@ -59,7 +61,7 @@ export const SidePanel = ({
               className: "text-md pl-5 font-extrabold",
             }}
           >
-            Archív
+            {t("conversations.sidePanel.archivedTitle")}
           </span>
         </div>
         <button
@@ -68,7 +70,7 @@ export const SidePanel = ({
               "btn rounded-none bg-white border-orange-500 hover:bg-orange-400 hover:text-white text-orange-500 w-auto",
           }}
         >
-          + Pridať nový štítok
+          {t("conversations.sidePanel.addNewLabel")}
         </button>
         <MessagesSearchContainer />
       </div>

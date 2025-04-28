@@ -6,6 +6,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { archiveMessage, deleteMessage } from "@/app/api/messages";
 import { ImCross } from "react-icons/im";
 import { Modal } from "@/app/ Components/Shared/Modal";
+import { useTranslation } from "react-i18next";
 
 export const ConversationTableItem = ({
   user,
@@ -43,6 +44,8 @@ export const ConversationTableItem = ({
     onMutationDelete.mutate(id);
     setModalOpen(false);
   };
+
+  const { t } = useTranslation();
   return (
     <tr>
       <th>{id}</th>
@@ -72,7 +75,7 @@ export const ConversationTableItem = ({
               }}
             >
               <span {...{ className: "text-md font-bold" }}>
-                Si si istý že chceš správu uplne vymazať?
+                {t("conversations.conversationTable.deleteConfirmation")}
               </span>
               <button
                 {...{
@@ -81,7 +84,7 @@ export const ConversationTableItem = ({
                   onClick: handleDeleteMessage,
                 }}
               >
-                Áno, vymaž
+                {t("conversations.conversationTable.deleteConfirmationButton")}
               </button>
             </div>
           </Modal>

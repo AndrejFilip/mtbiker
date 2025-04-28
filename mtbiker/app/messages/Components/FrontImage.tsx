@@ -1,6 +1,10 @@
+"use client";
+
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 export const FrontImage = () => {
+  const { t } = useTranslation();
   return (
     <div {...{ className: "relative" }}>
       <img
@@ -17,7 +21,7 @@ export const FrontImage = () => {
       >
         <div {...{ className: "flex flex-col items-center" }}>
           <p {...{ className: "text-5xl text-white font-extrabold" }}>
-            MOJE SPRÁVY
+            {t("conversations.frontImage")}
           </p>
         </div>
       </div>
