@@ -5,9 +5,10 @@ export const headers = {
 export const basicFetch = async (
   url: string,
   method = "GET",
-  headers?: any,
+  headers?: HeadersInit,
   body?: any
 ) => {
+  body = body ? JSON.stringify(body) : null;
   const response = await fetch(url, {
     cache: "no-store",
     method,

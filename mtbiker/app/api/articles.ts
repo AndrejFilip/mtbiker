@@ -33,7 +33,7 @@ export const getMagazineArticle =
 export const patchMagazineArticleLikes =
   ({ id, likes }: { id: number; likes: number }) =>
   () => {
-    const body = JSON.stringify({ likes });
+    const body = { likes };
 
     const data = basicFetch(`${url}/articles/${id}`, "PATCH", headers, body);
 
@@ -43,7 +43,7 @@ export const patchMagazineArticleLikes =
 export const patchMagazineArticleDislikes =
   ({ id, dislikes }: { id: number; dislikes: number }) =>
   () => {
-    const body = JSON.stringify({ dislikes });
+    const body = { dislikes };
 
     const data = basicFetch(`${url}/articles/${id}`, "PATCH", headers, body);
 
