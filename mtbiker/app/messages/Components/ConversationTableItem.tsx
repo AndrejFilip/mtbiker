@@ -12,6 +12,7 @@ export const ConversationTableItem = ({
   subject,
   lastMessage,
   id,
+  archived,
 }: MessagesConversationTableItemsProps) => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const queryClient = useQueryClient();
@@ -24,7 +25,7 @@ export const ConversationTableItem = ({
   });
 
   const handlePatchMesage = () => {
-    onMutationPatch.mutate(id);
+    onMutationPatch.mutate({ id, archived: !archived });
   };
   const formattedLastMessage = moment(lastMessage).format(
     "MMMM DD, YYYY HH:mm:ss'"
@@ -51,7 +52,10 @@ export const ConversationTableItem = ({
       <td {...{ className: "flex justify-center" }}>
         <div {...{ className: "flex flex-row gap-2 items-center" }}>
           <FaBoxArchive
-            {...{ onClick: handlePatchMesage, className: "cursor-pointer" }}
+            {...{
+              onClick: handlePatchMesage,
+              className: "cursor-pointer",
+            }}
           />
           <ImCross
             {...{

@@ -3,7 +3,15 @@ import { MessagesSearchContainer } from "./MessagesSearchContainer";
 import { Modal } from "@/app/ Components/Shared/Modal";
 import { ConversationsSendForm } from "./ConversationsSendForm";
 
-export const SidePanel = ({ messageId }: { messageId: number }) => {
+export const SidePanel = ({
+  messageId,
+  onArchivedClick,
+  onConversationsClick,
+}: {
+  messageId: number;
+  onArchivedClick: () => void;
+  onConversationsClick: () => void;
+}) => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   return (
     <div {...{ className: "max-w-xs" }}>
@@ -26,22 +34,33 @@ export const SidePanel = ({ messageId }: { messageId: number }) => {
         <div
           {...{
             className:
-              "border border-base-300 h-[50px] flex items-center mb-[-1px]",
+              "border border-base-300 h-[50px] flex items-center mb-[-1px] hover:bg-base-200 cursor-pointer",
+            onClick: onConversationsClick,
           }}
         >
-          <span {...{ className: "font-extrabold text-md pl-5" }}>
+          <span
+            {...{
+              className: "font-extrabold text-md pl-5 ",
+            }}
+          >
             Konverzácie
           </span>
         </div>
 
         <div
           {...{
-            className: "border border-base-300 h-[50px] flex items-center",
+            className:
+              "border border-base-300 h-[50px] flex items-center hover:bg-base-200 cursor-pointer",
+            onClick: onArchivedClick,
           }}
         >
-          <div {...{ className: "flex flex-row " }}>
-            <span {...{ className: "text-md pl-5" }}>Archív</span>
-          </div>
+          <span
+            {...{
+              className: "text-md pl-5 font-extrabold",
+            }}
+          >
+            Archív
+          </span>
         </div>
         <button
           {...{

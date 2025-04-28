@@ -65,17 +65,19 @@ export const ConversationsSendForm = ({
             placeholder: "odosielateľ",
             height: 40,
             ...register("user"),
+            inputRef: register("user").ref,
           }}
         />
         <span {...{ className: "text-sm text-red-300 font-extrabold" }}>
           {errors.user?.message}
         </span>
-        <span {...{ className: "text-sm font-bold" }}>Predmet</span>
+        <span {...{ className: "text-sm font-bold" }}>Názov konverzácie</span>
         <Input
           {...{
             placeholder: "Predmet",
             height: 40,
             ...register("subject"),
+            inputRef: register("subject").ref,
           }}
         />
         <span {...{ className: "text-sm text-red-300 font-extrabold" }}>
