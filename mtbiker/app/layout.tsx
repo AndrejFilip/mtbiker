@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "./ Components/Header/Header";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { Footer } from "./ Components/Footer/Footer";
+import "./i18n";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

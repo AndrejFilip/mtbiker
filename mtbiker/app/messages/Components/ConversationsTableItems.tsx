@@ -2,6 +2,7 @@ import React from "react";
 import { ConversationTableItem } from "./ConversationTableItem";
 import { MessagesConversationTableItemsProps } from "@/app/types";
 import { CiWarning } from "react-icons/ci";
+import { useTranslation } from "react-i18next";
 
 export const ConversationsTableItems = ({
   messages,
@@ -14,6 +15,8 @@ export const ConversationsTableItems = ({
     (message: MessagesConversationTableItemsProps) =>
       showArchived ? message.archived : !message.archived
   );
+
+  const { t } = useTranslation();
   return (
     <div>
       {filteredMessages?.length != 0 ? (
@@ -24,13 +27,21 @@ export const ConversationsTableItems = ({
             <thead>
               <tr>
                 <th></th>
-                <th>Používateľ</th>
-                <th {...{ className: "w-[500px]" }}>Názov konverzácie</th>
-                <th>Posledná správa</th>
+                <th> {t("conversations.conversationTable.user")}</th>
+                <th {...{ className: "w-[500px]" }}>
+                  {t("conversations.conversationTable.subject")}
+                </th>
+                <th>{t("conversations.conversationTable.lastMessage")}</th>
                 {!showArchived ? (
-                  <td>Archivovať/Vymazať</td>
+                  <td>
+                    {t("conversations.conversationTable.archive")}/
+                    {t("conversations.conversationTable.delete")}
+                  </td>
                 ) : (
-                  <td>Odarchivovať/Vymazať</td>
+                  <td>
+                    {t("conversations.conversationTable.unarchive")}/
+                    {t("conversations.conversationTable.delete")}
+                  </td>
                 )}
               </tr>
             </thead>
@@ -56,7 +67,7 @@ export const ConversationsTableItems = ({
           }}
         >
           <CiWarning {...{ className: "text-orange-600 " }} />{" "}
-          <span>Nemáš tu žiadne správy</span>
+          <span>{t("conversations.conversationTable.noMessage")}</span>
         </div>
       )}
     </div>
