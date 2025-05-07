@@ -303,21 +303,25 @@
       "user": "Andrejko",
       "subject": "Treba si vymeniť koleso na bicykli. Ihneď lebo sa niekde zdrbes ty pes",
       "lastMessage": "2025-03-19T08:50:04Z",
-      "body": "Treba si vymeniť koleso na bicykli. Ihneď lebo sa niekde zdrbes ty pes, ale ne"
+      "body": "Treba si vymeniť koleso na bicykli. Ihneď lebo sa niekde zdrbes ty pes, ale ne",
+      "unread": false,
+      "archived": false
     },
     {
       "id": 2,
       "user": "Jarino",
       "subject": "Ahoj Jarino",
       "lastMessage": "2025-03-22T19:32:24.141Z",
-      "body": "som dobry po tebe"
+      "body": "som dobry po tebe",
+      "unread": false
     },
     {
       "user": "ahoj",
       "subject": "ewrw",
       "body": "erwrwerew",
       "lastMessage": "2025-03-23T11:33:59.825Z",
-      "id": 3
+      "id": 3,
+      "unread": true
     }
   ]
 }

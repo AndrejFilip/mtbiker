@@ -3,7 +3,7 @@ import { MessagesConversationTableItemsProps } from "@/app/types";
 import React, { useState } from "react";
 import moment from "moment";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { archiveMessage, deleteMessage } from "@/app/api/messages";
+import { archiveMessage, deleteMessage, readMessage } from "@/app/api/messages";
 import { ImCross } from "react-icons/im";
 import { Modal } from "@/app/ Components/Shared/Modal";
 import { useTranslation } from "react-i18next";
@@ -14,6 +14,7 @@ export const ConversationTableItem = ({
   lastMessage,
   id,
   archived,
+  unread,
 }: MessagesConversationTableItemsProps) => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const queryClient = useQueryClient();
@@ -24,6 +25,18 @@ export const ConversationTableItem = ({
       queryClient.invalidateQueries({ queryKey: ["messages"] });
     },
   });
+
+  const onReadPatchMutation = useMutation({
+    mutationKey: ["read_message", id],
+    mutationFn: readMessage,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["messages"] });
+    },
+  });
+
+  const handlePatchReadMessage = () => {
+    onReadPatchMutation.mutate({ id, unread: !unread });
+  };
 
   const handlePatchMesage = () => {
     onMutationPatch.mutate({ id, archived: !archived });
@@ -47,7 +60,14 @@ export const ConversationTableItem = ({
 
   const { t } = useTranslation();
   return (
-    <tr>
+    <tr
+      {...{
+        className: unread
+          ? "bg-base-200 cursor-pointer"
+          : " bg-white cursor-pointer",
+        onClick: handlePatchReadMessage,
+      }}
+    >
       <th>{id}</th>
       <td>{user}</td>
       <td>{subject}</td>

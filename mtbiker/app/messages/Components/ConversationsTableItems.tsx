@@ -21,7 +21,9 @@ export const ConversationsTableItems = ({
     <div>
       {filteredMessages?.length != 0 ? (
         <div
-          {...{ className: "w-full border-t border-b border-base-200 mt-7" }}
+          {...{
+            className: "w-full border-t border-b border-base-200 mt-7",
+          }}
         >
           <table {...{ className: "table" }}>
             <thead>

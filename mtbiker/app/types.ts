@@ -120,6 +120,7 @@ export interface MessagesConversationTableItemsProps {
   user: string;
   lastMessage: string;
   archived: boolean;
+  unread: boolean;
 }
 
 export interface MessagesConversationPostProps {

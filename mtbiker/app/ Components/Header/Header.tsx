@@ -10,11 +10,26 @@ import { Dropdown } from "../MainPage/Dropdown";
 import Link from "next/link";
 import { Modal } from "../Shared/Modal";
 import { SignInForm } from "./SignInForm";
+import { useQuery } from "@tanstack/react-query";
+import { getMessages } from "@/app/api/messages";
+import { MessagesConversationTableItemsProps } from "@/app/types";
 
 export const Header = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const isUserLogged = localStorage.getItem("logged") === "true";
-  console.log(isUserLogged);
+  const { data } = useQuery({
+    queryKey: ["messages"],
+    queryFn: getMessages,
+  });
+
+  const messages: MessagesConversationTableItemsProps[] = Array.isArray(data)
+    ? data
+    : [];
+
+  const countOfUnreadMessages = messages?.filter(
+    (message) => message.unread
+  ).length;
+
   return (
     <div
       {...{
@@ -41,7 +56,7 @@ export const Header = () => {
         <WeatherButton />
         {isUserLogged ? (
           <>
-            <MessagesButton />
+            <MessagesButton {...{ count: countOfUnreadMessages }} />
             <Dropdown />
           </>
         ) : (
