@@ -65,7 +65,7 @@ export const ConversationTableItem = ({
         className: unread
           ? "bg-base-200 cursor-pointer"
           : " bg-white cursor-pointer",
-        onClick: handlePatchReadMessage,
+        onClick: unread ? handlePatchReadMessage : undefined,
       }}
     >
       <th>{id}</th>
