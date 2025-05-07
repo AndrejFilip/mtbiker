@@ -9,21 +9,23 @@ export const MessagesButton = ({ count }: { count: number }) => {
       <Link {...{ href: "/messages" }}>
         <FaRegMessage {...{ className: "w-[20px] h-[20px] cursor-pointer" }} />
       </Link>
-      <div
-        {...{
-          className:
-            " absolute -top-3 -right-3 rounded-full bg-red-600 w-[20px] h-[20px]",
-        }}
-      >
-        <span
+      {count > 0 ? (
+        <div
           {...{
             className:
-              "text-xs flex justify-center text-white font-bold pt-0.5",
+              " absolute -top-3 -right-3 rounded-full bg-red-600 w-[20px] h-[20px]",
           }}
         >
-          {count}
-        </span>
-      </div>
+          <span
+            {...{
+              className:
+                "text-xs flex justify-center text-white font-bold pt-0.5",
+            }}
+          >
+            {count}
+          </span>
+        </div>
+      ) : null}
     </div>
   );
 };
