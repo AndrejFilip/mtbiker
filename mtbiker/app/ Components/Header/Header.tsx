@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import mtbiker from "../../images/mtbiker.png";
 import { MenuButtons } from "./MenuButtons";
 import { MessagesButton } from "./MessagesButton";
@@ -22,13 +22,15 @@ export const Header = () => {
     queryFn: getMessages,
   });
 
-  const messages: MessagesConversationTableItemsProps[] = Array.isArray(data)
-    ? data
-    : [];
+  const messages: MessagesConversationTableItemsProps[] = useMemo(
+    () => (Array.isArray(data) ? data : []),
+    [data]
+  );
 
-  const countOfUnreadMessages = messages?.filter(
-    (message) => message.unread
-  ).length;
+  const countOfUnreadMessages = useMemo(
+    () => messages?.filter((message) => message.unread).length,
+    [messages]
+  );
 
   return (
     <div
