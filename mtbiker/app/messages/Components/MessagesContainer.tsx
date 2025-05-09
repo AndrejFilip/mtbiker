@@ -15,7 +15,9 @@ export const MessagesContainer = () => {
     queryFn: getMessages,
   });
 
-  const messages: MessagesConversationTableItemsProps[] = data;
+  const messages: MessagesConversationTableItemsProps[] = Array.isArray(data)
+    ? data
+    : [];
   const getMessageId = getMaxId(messages) + 1;
   const archivedMessages = getArchivedMessages(messages);
 

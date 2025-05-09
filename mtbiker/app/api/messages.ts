@@ -27,6 +27,18 @@ export const archiveMessage = ({
   return basicFetch(`${url}/messages/${id}`, "PATCH", headers, body);
 };
 
+export const readMessage = ({
+  id,
+  unread,
+}: {
+  id: number;
+  unread: boolean;
+}) => {
+  const body = { unread };
+
+  return basicFetch(`${url}/messages/${id}`, "PATCH", headers, body);
+};
+
 export const deleteMessage = (id: number) => {
   return basicFetch(`${url}/messages/${id}`, "DELEtE", headers);
 };

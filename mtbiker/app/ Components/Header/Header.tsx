@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import mtbiker from "../../images/mtbiker.png";
 import { MenuButtons } from "./MenuButtons";
 import { MessagesButton } from "./MessagesButton";
@@ -10,11 +10,28 @@ import { Dropdown } from "../MainPage/Dropdown";
 import Link from "next/link";
 import { Modal } from "../Shared/Modal";
 import { SignInForm } from "./SignInForm";
+import { useQuery } from "@tanstack/react-query";
+import { getMessages } from "@/app/api/messages";
+import { MessagesConversationTableItemsProps } from "@/app/types";
 
 export const Header = () => {
   const [modalOpen, setModalOpen] = useState<boolean>(false);
   const isUserLogged = localStorage.getItem("logged") === "true";
-  console.log(isUserLogged);
+  const { data } = useQuery({
+    queryKey: ["messages"],
+    queryFn: getMessages,
+  });
+
+  const messages: MessagesConversationTableItemsProps[] = useMemo(
+    () => (Array.isArray(data) ? data : []),
+    [data]
+  );
+
+  const countOfUnreadMessages = useMemo(
+    () => messages?.filter((message) => message.unread).length,
+    [messages]
+  );
+
   return (
     <div
       {...{
@@ -41,7 +58,7 @@ export const Header = () => {
         <WeatherButton />
         {isUserLogged ? (
           <>
-            <MessagesButton />
+            <MessagesButton {...{ count: countOfUnreadMessages }} />
             <Dropdown />
           </>
         ) : (
