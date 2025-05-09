@@ -42,7 +42,7 @@ export const ConversationTableItem = ({
     onMutationPatch.mutate({ id, archived: !archived });
   };
   const formattedLastMessage = moment(lastMessage).format(
-    "MMMM DD, YYYY HH:mm:ss'"
+    "MMMM DD, YYYY HH:mm:ss"
   );
 
   const onMutationDelete = useMutation({
